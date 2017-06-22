@@ -1,0 +1,11 @@
+<launch>
+
+  <param name="robot_description" 
+	 command="$(find xacro)/xacro.py '$(find lwr_defs)/robots/kuka_lwr_arm.urdf.xml'" />
+
+  <node name="robot_sim" pkg="robot_sim" type="robot_sim_bringup" respawn="false" output="screen"/>
+
+  <node name="$(anon rviz)" pkg="rviz" type="rviz" respawn="false"
+	args="-d $(find robot_sim)/config/rviz.rviz" output="screen"/>
+
+</launch>

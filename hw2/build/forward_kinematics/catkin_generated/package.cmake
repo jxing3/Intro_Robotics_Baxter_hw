@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "forward_kinematics")
+set(forward_kinematics_MAINTAINER "matei <matei@todo.todo>")
+set(forward_kinematics_DEPRECATED "")
+set(forward_kinematics_VERSION "0.0.0")
+set(forward_kinematics_BUILD_DEPENDS "rospy" "sensor_msgs" "tf" "urdfdom_py")
+set(forward_kinematics_RUN_DEPENDS "rospy" "sensor_msgs" "tf" "urdfdom_py")
+set(forward_kinematics_BUILDTOOL_DEPENDS "catkin")

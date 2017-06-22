@@ -1,0 +1,2 @@
+cartesian_control:forward_kinematics:lwr_robot/lwr_defs:robot_sim
+-DCATKIN_DEVEL_PREFIX=/home/jesse/ros_sandbox/hw2/devel -DCMAKE_INSTALL_PREFIX=/home/jesse/ros_sandbox/hw2/install -G Unix Makefiles

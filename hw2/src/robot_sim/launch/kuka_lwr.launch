@@ -1,0 +1,14 @@
+<launch>
+
+  <param name="robot_description" 
+	 command="$(find xacro)/xacro.py '$(find lwr_defs)/robots/kuka_lwr_arm.urdf.xml'" />
+
+  <node name="robot_sim" pkg="robot_sim" type="robot_sim_bringup" respawn="false" output="screen">
+  	<param name="joint_values" value="0.5"/>
+  </node>
+  <node name="fwk" pkg="forward_kinematics" type="fwk.py" respawn="false" output="screen"/>
+
+  <node name="$(anon rviz)" pkg="rviz" type="rviz" respawn="false"
+	args="-d $(find cartesian_control)/config/rviz.rviz" output="screen"/>
+
+</launch>
